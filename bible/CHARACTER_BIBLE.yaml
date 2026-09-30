@@ -1,1 +1,276 @@
+version: "5.0"
 
+title: "Celestial Jyotish Character Bible"
+
+purpose:
+  description: >
+    Permanent character-continuity reference for the Celestial Jyotish V5
+    cinematic production system.
+  rule: >
+    Character identity remains stable across episodes, scenes, images,
+    thumbnails, and video generations. Wardrobe and environment may change
+    according to the story, but fundamental identity must not drift.
+
+characters:
+
+  dev:
+    role: "Primary male lead"
+
+    identity:
+      age: 28
+      ethnicity: "Indian-South Asian"
+      height: "6'2\""
+      build: "Extraordinarily muscular athletic build"
+      physique:
+        - "Broad shoulders"
+        - "Powerful chest"
+        - "Powerful arms"
+        - "Highly defined V-shaped torso"
+
+    face:
+      structure:
+        - "Extremely handsome symmetrical face"
+        - "Strong jawline"
+        - "High cheekbones"
+        - "Full lips"
+      eyes:
+        color: "Piercing blue"
+        expression:
+          - "Intelligent"
+          - "Warm"
+          - "Regal"
+          - "Emotionally expressive"
+
+    skin:
+      tone: "Warm golden skin"
+      quality: "Natural, realistic, healthy skin texture"
+
+    hair:
+      color: "Dark"
+      style: "Thick, dark, naturally wavy hair"
+
+    emotional_identity:
+      core:
+        - "Innocent"
+        - "Regal"
+        - "Dignified"
+        - "Warm"
+      behavioral_principles:
+        - "Never become arrogant merely because of physical strength"
+        - "Strength should coexist with restraint"
+        - "Emotion should be communicated through believable behavior"
+        - "Protective actions are preferable to exaggerated declarations"
+
+    visual_signature:
+      accessory:
+        type: "Moon pendant"
+        purpose: >
+          Recurring visual signature that may appear when appropriate to
+          maintain character continuity.
+      palette:
+        preferred:
+          - "Dark charcoal"
+          - "Deep brown"
+          - "Black"
+          - "Muted jewel tones"
+        note: >
+          Palette is a preference, not an absolute wardrobe restriction.
+
+    wardrobe:
+      rule: >
+        Wardrobe may change according to the realistic setting, story,
+        profession, season, social context, and episode.
+      principle: >
+        Clothing must remain believable, premium, masculine, Indian or
+        contextually appropriate.
+
+    behavior:
+      physical_presence:
+        - "Confident but not theatrical"
+        - "Controlled movement"
+        - "Purposeful physical action"
+        - "Natural eye contact"
+      storytelling_rule: >
+        Dev should normally be doing something meaningful rather than
+        standing motionless while delivering exposition.
+
+    continuity_locks:
+      face: true
+      body: true
+      eyes: true
+      hair: true
+      skin_tone: true
+      fundamental_emotional_identity: true
+      wardrobe: false
+      environment: false
+
+  asha:
+    role: "Primary female lead"
+
+    identity:
+      age: 26
+      ethnicity: "Indian-South Asian"
+      physique: "Voluptuous hourglass figure"
+
+    face:
+      structure:
+        - "Extremely beautiful face"
+        - "Soft innocent features"
+      eyes:
+        color: "Striking vibrant emerald green"
+        expression:
+          - "Serene"
+          - "Confident"
+          - "Warm"
+          - "Intelligent"
+
+    skin:
+      tone: "Warm golden skin"
+      quality: "Radiant, luminous, realistic skin texture"
+
+    hair:
+      color: "Dark"
+      style: "Long, dark, naturally wavy hair"
+
+    emotional_identity:
+      core:
+        - "Graceful"
+        - "Intelligent"
+        - "Warm"
+        - "Mysterious"
+        - "Quietly authoritative"
+      behavioral_principles:
+        - "Confidence should feel natural rather than aggressive"
+        - "Beauty should remain premium and cinematic rather than vulgar"
+        - "Emotion should be communicated through expression and action"
+        - "Warmth should remain visible even during conflict"
+
+    visual_signature:
+      palette:
+        preferred:
+          - "Emerald"
+          - "Deep jewel tones"
+          - "Gold"
+          - "Rich cinematic colors"
+      accessories:
+        preferred:
+          - "Emerald-inspired jewelry"
+          - "Gold celestial accessories"
+        note: >
+          Accessories may change according to wardrobe and scene while
+          maintaining visual continuity.
+
+    wardrobe:
+      rule: >
+        Wardrobe may change according to the realistic setting, story,
+        profession, season, social context, and episode.
+      principle: >
+        Clothing must remain elegant, premium, cinematic and contextually
+        appropriate.
+
+    behavior:
+      physical_presence:
+        - "Graceful movement"
+        - "Controlled expression"
+        - "Natural confidence"
+        - "Purposeful physical action"
+      storytelling_rule: >
+        Asha should normally be doing something meaningful rather than
+        standing motionless while delivering exposition.
+
+    continuity_locks:
+      face: true
+      body: true
+      eyes: true
+      hair: true
+      skin_tone: true
+      fundamental_emotional_identity: true
+      wardrobe: false
+      environment: false
+
+relationship:
+  dev_and_asha:
+    dynamic:
+      - "Natural chemistry"
+      - "Mutual respect"
+      - "Emotional intelligence"
+      - "Believable friction when story requires it"
+      - "Conscious repair after conflict"
+
+    storytelling:
+      principle: >
+        Their relationship should be demonstrated through behavior,
+        proximity, shared tasks, protective gestures, disagreement,
+        cooperation, restraint, and repair.
+
+      avoid:
+        - "Artificial constant smiling"
+        - "Generic romantic posing"
+        - "Unmotivated physical intimacy"
+        - "Dialogue-only emotional resolution"
+
+      preferred:
+        - "Working together"
+        - "Helping one another"
+        - "Sharing responsibility"
+        - "Protective gestures"
+        - "Repairing something together"
+        - "Shared quiet moments"
+        - "Meaningful eye contact"
+
+global_continuity_rules:
+
+  identity:
+    rule: >
+      Never redesign Dev or Asha merely to suit a new image prompt.
+
+  wardrobe:
+    rule: >
+      Wardrobe may change when the story changes. Wardrobe variation must
+      not be mistaken for character identity variation.
+
+  environment:
+    rule: >
+      Environment changes according to the story and should not alter the
+      fundamental appearance of either character.
+
+  physical_action:
+    rule: >
+      Characters should normally perform meaningful physical actions
+      appropriate to the scene.
+
+  realism:
+    rule: >
+      Preserve realistic anatomy, natural skin texture, believable
+      proportions, realistic clothing behavior, and physically plausible
+      environments.
+
+  cinematic_identity:
+    rule: >
+      Maintain the established premium Celestial Jyotish cinematic identity
+      across all generations.
+
+negative_character_drift:
+  avoid:
+    - "Changing Dev's eye color"
+    - "Changing Asha's eye color"
+    - "Changing facial structure"
+    - "Changing fundamental body type"
+    - "Changing ethnicity"
+    - "Changing age without explicit story instruction"
+    - "Random hairstyle changes that contradict continuity"
+    - "Plastic or artificial skin"
+    - "Generic stock-photo faces"
+    - "Different faces between consecutive scenes"
+    - "Exaggerated fantasy anatomy"
+    - "Character redesign caused by prompt compression"
+
+generation_priority:
+  - "Character identity"
+  - "Continuity"
+  - "Physical realism"
+  - "Scene action"
+  - "Emotional expression"
+  - "Wardrobe"
+  - "Environment"
+  - "Cinematic styling"
