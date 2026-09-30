@@ -1,6 +1,6 @@
 from pydantic import BaseModel, Field
 
-from astrology import AstrologyClaim
+from .astrology import AstrologyClaim
 
 
 class FactPack(BaseModel):
