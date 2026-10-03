@@ -16,7 +16,7 @@ Your job is to transform a research topic together with retrieved source
 material into a structured FactPack for downstream story and script
 generation.
 
-IMPORTANT SOURCE DISCIPLINE:
+SOURCE DISCIPLINE:
 
 1. Retrieved web material is source material, not automatic proof.
 
@@ -33,33 +33,56 @@ IMPORTANT SOURCE DISCIPLINE:
    supplied source material actually contains identifiable evidence from
    that text.
 
-6. A claim may be placed in verified_claims only when the supplied evidence
-   directly supports the claim and the source identity is clear.
+CLAIM HANDLING:
 
-7. If the evidence is relevant but insufficient, place the claim in
-   uncertain_claims.
+6. verified_claims MUST contain the actual factual claim as a concise,
+   human-readable sentence. Do NOT put claim IDs in this field.
 
-8. If supplied sources materially disagree, place the affected claim in
-   disputed_claims and explain the disagreement in research_notes.
+7. A claim may be placed in verified_claims only when the supplied evidence
+   directly supports the statement.
 
-9. If the available evidence does not adequately support a claim, place it
-   in blocked_claims rather than inventing support.
+8. uncertain_claims MUST contain the actual claim or proposition that has
+   insufficient supporting evidence. Do NOT put claim IDs there.
 
-10. Do not upgrade a modern website's interpretation into a classical rule
+9. disputed_claims MUST contain the actual claim or proposition when
+   supplied sources materially disagree.
+
+10. blocked_claims MUST contain the actual claim or proposition that should
+    not be used because the available evidence does not adequately support
+    it.
+
+11. Do not upgrade a modern website's interpretation into a classical rule
     merely because the website mentions a classical text.
 
-11. Preserve important technical Jyotish terminology.
+12. Do not use the model's prior knowledge to fill evidence gaps.
 
-12. Distinguish source-derived information from interpretation or inference.
+13. Preserve important technical Jyotish terminology.
 
-13. research_notes must preserve the actual source title and URL for every
-    source used.
+14. Distinguish source-derived information from interpretation or inference.
 
-14. Do not write the final YouTube script.
+RESEARCH NOTES:
 
-15. Do not manufacture certainty from the model's prior knowledge.
+15. research_notes must explain important source limitations,
+    terminology, disagreements, and research dependencies.
 
-The final response must conform exactly to the FactPack structure.
+16. research_notes must preserve the actual title and URL for every source
+    used.
+
+17. If a source appears to reproduce or summarize a classical text rather
+    than being the classical text itself, make that distinction clear.
+
+OUTPUT:
+
+18. Do not write the final YouTube script.
+
+19. The FactPack is a research handoff for downstream agents.
+
+20. The final response must conform exactly to the FactPack structure.
+
+Most important rule:
+
+The FactPack claim lists contain REAL CLAIM SENTENCES, not labels,
+identifiers, or internal IDs.
 """
 
 
@@ -158,17 +181,28 @@ Retrieved source material:
 
 Use only the supplied source material as external evidence.
 
-Do not infer that a source is classical merely because its title, URL,
-or passage mentions a classical text.
+Create a FactPack for downstream story development.
 
-Prepare a FactPack that clearly separates:
-- supported claims
-- disputed claims
-- uncertain claims
-- blocked claims
-- important research notes
+CRITICAL OUTPUT REQUIREMENT:
 
-For each source used in research_notes, preserve its exact title and URL.
+Every entry in verified_claims, disputed_claims, uncertain_claims, and
+blocked_claims must be an actual human-readable claim or proposition.
+
+For example:
+
+GOOD:
+"The first house is associated with the body, personality, and overall
+orientation of the native."
+
+BAD:
+"claim_lagna_significations"
+
+Do not create internal claim IDs.
+
+For every source used in research_notes, preserve its exact title and URL.
+
+If the retrieved evidence is insufficient to support a classical rule,
+say so rather than filling the gap from prior model knowledge.
 """
 
     result = await research_agent.run(research_prompt)
